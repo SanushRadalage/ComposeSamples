@@ -28,5 +28,22 @@ Used BuildSrc Dependancy Management Technique
 ## Demo
 
 <p align="center">
-  <img src="https://github.com/SanushRadalage/ComposeSamples/blob/master/app/src/main/res/drawable/gif.gif" width="200" height="400">
+  <table>
+  <tr>
+    <th>Light Mode</th>
+    <th>Dark Mode</th>
+  </tr>
+  <tr>
+    <td>
+      <p align="center">
+        <img src="https://github.com/SanushRadalage/ComposeSamples/blob/master/app/src/main/res/drawable/gif.gif" width="200" height="400">
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        <img src="https://github.com/SanushRadalage/ComposeSamples/blob/master/app/src/main/res/drawable/gif_dark.gif" width="200" height="400">
+      </p>
+    </td>
+  </tr>
+</table>
 </p>
