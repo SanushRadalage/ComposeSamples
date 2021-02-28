@@ -14,7 +14,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.AmbientContext
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.Dp
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.jobs.assignment.R
@@ -23,6 +25,11 @@ import com.jobs.assignment.R
 fun loadPicture(url: String, @DrawableRes defaultImage: Int): MutableState<Bitmap?> {
 
     val bitMapState: MutableState<Bitmap?> = mutableStateOf(null)
+
+    val circularProgressDrawable = CircularProgressDrawable(AmbientContext.current)
+    circularProgressDrawable.strokeWidth = 5f
+    circularProgressDrawable.centerRadius = 30f
+    circularProgressDrawable.start()
 
     Glide.with(AmbientContext.current)
         .asBitmap()
@@ -38,6 +45,8 @@ fun loadPicture(url: String, @DrawableRes defaultImage: Int): MutableState<Bitma
     Glide.with(AmbientContext.current)
         .asBitmap()
         .load(url)
+        .diskCacheStrategy(DiskCacheStrategy.ALL)
+        .placeholder(circularProgressDrawable)
         .into(object : CustomTarget<Bitmap>() {
             override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
                 bitMapState.value = resource

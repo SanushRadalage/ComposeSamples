@@ -33,8 +33,8 @@ fun CardView(
         shape = MaterialTheme.shapes.small,
         modifier = Modifier
                 .padding(
-                        bottom = 6.dp,
-                        top = 6.dp,
+                        bottom = 8.dp,
+                        top = 8.dp,
                 )
                 .fillMaxWidth()
                 .clickable(onClick = onClick),
@@ -80,7 +80,7 @@ fun CardView(
                 Row(
                     modifier = Modifier
                             .fillMaxWidth()
-                            .padding(start = 8.dp, end = 8.dp)
+                            .padding(start = 10.dp, end = 10.dp)
                 ) {
                     Text(
                         text = category!!,
@@ -96,7 +96,7 @@ fun CardView(
                 Row(
                     modifier = Modifier
                             .fillMaxWidth()
-                            .padding(start = 8.dp, end = 8.dp)
+                            .padding(start = 10.dp, end = 10.dp)
                 ) {
                     val service = job.service.toString()
                     Text(
@@ -113,7 +113,7 @@ fun CardView(
                 Row(
                     modifier = Modifier
                             .fillMaxWidth()
-                            .padding(bottom = 8.dp, start = 8.dp, end = 8.dp)
+                            .padding(bottom = 8.dp, start = 10.dp, end = 10.dp)
                 ) {
                     val availability = job.availability.toString()
                     Text(

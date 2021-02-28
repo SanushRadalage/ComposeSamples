@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#E60A0A</color>
     <color name="darkGray">#6E6E6E</color>
+    <color name="lightGray">#eceff1</color>
 </resources>

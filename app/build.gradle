@@ -101,4 +101,6 @@ dependencies {
     implementation Deps.roomKtx
 
     implementation Deps.slider
+
+    implementation Deps.swipeRefresh
 }

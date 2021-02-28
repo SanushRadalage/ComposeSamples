@@ -116,7 +116,7 @@ class ListFragment : Fragment(), StateHandler {
     }
 
     override fun onSuccess(job: Job) {
-        TODO("Not yet implemented")
+        TODO("since using lazy loading success callBack is not needed")
     }
 
     override fun onFailure() {

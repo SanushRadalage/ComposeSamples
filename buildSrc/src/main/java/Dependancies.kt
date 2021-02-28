@@ -43,4 +43,6 @@ object Deps {
     const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
 
     const val slider = "com.github.smarteist:autoimageslider:${Versions.autoSlider}"
+
+    const val swipeRefresh = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.res.ResourcesCompat
@@ -13,6 +14,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.jobs.assignment.R
 import com.jobs.assignment.domain.model.Job
@@ -41,6 +43,7 @@ class ItemFragment : Fragment(), StateHandler {
     lateinit var category: TextView
     lateinit var cost: TextView
     lateinit var service: TextView
+    lateinit var fabIcon: FloatingActionButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,9 +69,7 @@ class ItemFragment : Fragment(), StateHandler {
         category = requireView().findViewById(R.id.categoryTxt)
         cost = requireView().findViewById(R.id.PriceTxt)
         service = requireView().findViewById(R.id.serviceTxt)
-
-
-
+        fabIcon = requireView().findViewById(R.id.floating_action_button)
 
         toolBar = requireActivity().findViewById(R.id.mainToolBar)
         toolBar.title = getString(R.string.jobDetail)
@@ -80,6 +81,10 @@ class ItemFragment : Fragment(), StateHandler {
 
         toolBar.setNavigationOnClickListener {
             findNavController().navigate(R.id.action_itemFragment_to_listFragment)
+        }
+
+        fabIcon.setOnClickListener {
+            Toast.makeText(requireContext(), "Make reservation", Toast.LENGTH_SHORT).show()
         }
 
         backCallBack()
