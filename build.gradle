@@ -12,66 +12,6 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21"
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.28-alpha'
     }
-
-    ext {
-
-        versions = [
-                'Compose'       : '1.0.0-alpha10',
-                'Navigation'    : '2.3.2',
-                'Retrofit'      : '2.9.0',
-                'Hilt'          : '2.28-alpha',
-                'HiltLifecycle': '1.0.0-alpha02',
-                'Glide'         : '4.11.0',
-                'OkHTTP'        : '4.2.1',
-                'Room'          : '2.2.6',
-                'AutoSlider'    : '1.4.0'
-        ]
-
-        deps = [
-                compose = [
-                        'ComposeUI'                 : "androidx.compose.ui:ui:${versions.Compose}",
-                        'ComposeUITooling'          : "androidx.compose.ui:ui:${versions.Compose}",
-                        'ComposeFoundation'         : "androidx.compose.foundation:foundation:${versions.Compose}",
-                        'ComposeMaterial'           : "androidx.compose.material:material:${versions.Compose}",
-                        'ComposeMaterialIcons'      : "androidx.compose.material:material-icons-core:${versions.Compose}",
-                        'ComposeMaterialIconExtends': "androidx.compose.material:material-icons-extended:${versions.Compose}",
-                        'ComposeLiveData'           : "androidx.compose.runtime:runtime-livedata:${versions.Compose}",
-                        'ComposeRXJava2'            : "androidx.compose.runtime:runtime-rxjava2:${versions.Compose}",
-                ],
-                navigation = [
-                        'navigationFragment': "androidx.navigation:navigation-fragment-ktx:${versions.Navigation}",
-                        'navigationUI'      : "androidx.navigation:navigation-ui-ktx:${versions.Navigation}",
-                ],
-                retrofit = [
-                        'retrofit2' : "com.squareup.retrofit2:retrofit:${versions.Retrofit}",
-                        'converter': "com.squareup.retrofit2:converter-gson:${versions.Retrofit}",
-                ],
-                hilt = [
-                        'hiltAndroid'        : "com.google.dagger:hilt-android:${versions.Hilt}",
-                        'hiltCompiler': "com.google.dagger:hilt-android-compiler:${versions.Hilt}"
-                ],
-                hiltLifeCycle = [
-                        'hiltViewModel': "androidx.hilt:hilt-lifecycle-viewmodel:${versions.HiltLifecycle}",
-                        'hiltCompiler' : "androidx.hilt:hilt-compiler:${versions.HiltLifecycle}"
-                ],
-                glide = [
-                        'glideModule'        : "com.github.bumptech.glide:glide:${versions.Glide}",
-                        'glideCompiler': "com.github.bumptech.glide:compiler:${versions.Glide}"
-                ],
-                okHttp = [
-                        'okHttp3'     : "com.squareup.okhttp3:okhttp:${versions.OkHTTP}",
-                        'interceptor': "com.squareup.okhttp3:logging-interceptor:${versions.OkHTTP}"
-                ],
-                room = [
-                        'roomRunTime' : "androidx.room:room-runtime:${versions.Room}",
-                        'roomCompiler': "androidx.room:room-compiler:${versions.Room}",
-                        'roomKtx'     : "androidx.room:room-ktx:${versions.Room}",
-                ],
-                autoSlider = [
-                        'slider': "com.github.smarteist:autoimageslider:${versions.AutoSlider}"
-                ]
-        ]
-    }
 }
 
 allprojects {

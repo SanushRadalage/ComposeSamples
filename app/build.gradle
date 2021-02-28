@@ -58,7 +58,6 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
@@ -70,36 +69,36 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation deps.compose.ComposeUI
-    implementation deps.compose.ComposeUITooling
-    implementation deps.compose.ComposeFoundation
-    implementation deps.compose.ComposeMaterial
-    implementation deps.compose.ComposeMaterialIcons
-    implementation deps.compose.ComposeMaterialIconExtends
-    implementation deps.compose.ComposeLiveData
-    implementation deps.compose.ComposeRXJava2
+    implementation Deps.ComposeUI
+    implementation Deps.ComposeUITooling
+    implementation Deps.ComposeFoundation
+    implementation Deps.ComposeMaterial
+    implementation Deps.ComposeMaterialIcons
+    implementation Deps.ComposeMaterialIconExtends
+    implementation Deps.ComposeLiveData
+    implementation Deps.ComposeRXJava2
 
-    implementation deps.navigation.navigationFragment
-    implementation deps.navigation.navigationUI
+    implementation Deps.navigationFragment
+    implementation Deps.navigationUI
 
-    implementation deps.retrofit.retrofit2
-    implementation deps.retrofit.converter
+    implementation Deps.retrofit2
+    implementation Deps.converter
 
-    implementation deps.hilt.hiltAndroid
-    kapt deps.hilt.hiltCompiler
+    implementation Deps.hiltAndroid
+    kapt Deps.hiltCompiler
 
-    implementation deps.hiltLifeCycle.hiltViewModel
-    kapt deps.hiltLifeCycle.hiltCompiler
+    implementation Deps.hiltViewModel
+    kapt Deps.hiltXCompiler
 
-    implementation deps.glide.glideModule
-    kapt deps.glide.glideCompiler
+    implementation Deps.glideModule
+    kapt Deps.glideCompiler
 
-    implementation deps.okHttp.okHttp3
-    implementation deps.okHttp.interceptor
+    implementation Deps.okHttp3
+    implementation Deps.interceptor
 
-    implementation deps.room.roomRunTime
-    kapt deps.room.roomCompiler
-    implementation deps.room.roomKtx
+    implementation Deps.roomRunTime
+    kapt Deps.roomCompiler
+    implementation Deps.roomKtx
 
-    implementation deps.autoSlider.slider
+    implementation Deps.slider
 }
