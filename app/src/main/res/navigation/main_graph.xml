@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.assignment.presentation.ui.list.ListFragment"
+        android:name="com.jobs.assignment.presentation.ui.list.ListFragment"
         android:label="list_fragment"
         tools:layout="@layout/list_fragment" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/itemFragment"
-        android:name="com.example.assignment.presentation.ui.item.ItemFragment"
+        android:name="com.jobs.assignment.presentation.ui.item.ItemFragment"
         android:label="item_fragment"
         tools:layout="@layout/item_fragment" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.assignment.presentation.ui.profile.ProfileFragment"
+        android:name="com.jobs.assignment.presentation.ui.profile.ProfileFragment"
         android:label="profile_fragment"
         tools:layout="@layout/profile_fragment" />
 </navigation>

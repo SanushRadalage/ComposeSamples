@@ -14,7 +14,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.assignment"
+        applicationId "com.jobs.assignment"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
@@ -70,44 +70,36 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'androidx.compose.ui:ui:1.0.0-alpha10'
-    implementation 'androidx.compose.ui:ui-tooling:1.0.0-alpha10'
-    implementation 'androidx.compose.foundation:foundation:1.0.0-alpha10'
-    implementation 'androidx.compose.material:material:1.0.0-alpha10'
-    implementation 'androidx.compose.material:material-icons-core:1.0.0-alpha10'
-    implementation 'androidx.compose.material:material-icons-extended:1.0.0-alpha10'
-    implementation 'androidx.compose.runtime:runtime-livedata:1.0.0-alpha10'
-    implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.0-alpha10'
+    implementation deps.compose.ComposeUI
+    implementation deps.compose.ComposeUITooling
+    implementation deps.compose.ComposeFoundation
+    implementation deps.compose.ComposeMaterial
+    implementation deps.compose.ComposeMaterialIcons
+    implementation deps.compose.ComposeMaterialIconExtends
+    implementation deps.compose.ComposeLiveData
+    implementation deps.compose.ComposeRXJava2
 
-    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.0-alpha10'
+    implementation deps.navigation.navigationFragment
+    implementation deps.navigation.navigationUI
 
-    def nav_version = "2.3.2"
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation deps.retrofit.retrofit2
+    implementation deps.retrofit.converter
 
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation deps.hilt.hiltAndroid
+    kapt deps.hilt.hiltCompiler
 
-    implementation "com.google.dagger:hilt-android:2.28-alpha"
-    kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
+    implementation deps.hiltLifeCycle.hiltViewModel
+    kapt deps.hiltLifeCycle.hiltCompiler
 
-    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
-    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
+    implementation deps.glide.glideModule
+    kapt deps.glide.glideCompiler
 
-    def glide = "4.11.0"
-    implementation "com.github.bumptech.glide:glide:$glide"
-    kapt "com.github.bumptech.glide:compiler:$glide"
+    implementation deps.okHttp.okHttp3
+    implementation deps.okHttp.interceptor
 
-    implementation "com.squareup.okhttp3:okhttp:4.2.1"
-    implementation "com.squareup.okhttp3:logging-interceptor:4.2.1"
+    implementation deps.room.roomRunTime
+    kapt deps.room.roomCompiler
+    implementation deps.room.roomKtx
 
-    def room_version = "2.2.6"
-
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    implementation "androidx.room:room-ktx:$room_version"
-
-    implementation 'com.github.smarteist:autoimageslider:1.4.0'
-
-
+    implementation deps.autoSlider.slider
 }
