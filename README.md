@@ -6,11 +6,12 @@ Used Android Studio Arctic Fox Canary Version 4 to implement the application.
 
 ## Dependencies
 
-- JetPack Composer
+- JetPack Compose
 - Material Design
 - Hilt Dependency Injection
 - Jetpack Navigation Component
 - Retrofit2
+- Room Database
 - Gson
 - Glide
 
